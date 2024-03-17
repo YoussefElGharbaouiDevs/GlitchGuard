@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchGuard.Infrastructure", "GlitchGuard.Infrastructure\GlitchGuard.Infrastructure.csproj", "{9B87987B-F3E3-4C79-BB6B-206E25896581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchGuard.Domain", "GlitchGuard.Domain\GlitchGuard.Domain.csproj", "{76B2BA8D-CF7F-48C3-ABE7-DCC4E6580F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlitchGuard.Api", "GlitchGuard.Api\GlitchGuard.Api.csproj", "{AFB0D789-4BA7-4D22-95B3-9CC0017728FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B87987B-F3E3-4C79-BB6B-206E25896581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B87987B-F3E3-4C79-BB6B-206E25896581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B87987B-F3E3-4C79-BB6B-206E25896581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B87987B-F3E3-4C79-BB6B-206E25896581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B2BA8D-CF7F-48C3-ABE7-DCC4E6580F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B2BA8D-CF7F-48C3-ABE7-DCC4E6580F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B2BA8D-CF7F-48C3-ABE7-DCC4E6580F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B2BA8D-CF7F-48C3-ABE7-DCC4E6580F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB0D789-4BA7-4D22-95B3-9CC0017728FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB0D789-4BA7-4D22-95B3-9CC0017728FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB0D789-4BA7-4D22-95B3-9CC0017728FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB0D789-4BA7-4D22-95B3-9CC0017728FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

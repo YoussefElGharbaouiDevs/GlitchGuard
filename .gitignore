@@ -1,24 +1,19 @@
-# Compiled class file
-*.class
+# Ignore .idea directory
+.idea/
 
-# Log file
-*.log
+# Ignore bin and obj directories in GlitchGuard.Api
+GlitchGuard.Api/bin/
+GlitchGuard.Api/obj/
 
-# BlueJ files
-*.ctxt
+# Ignore bin and obj directories in GlitchGuard.Infrastructure
+GlitchGuard.Infrastructure/bin/
+GlitchGuard.Infrastructure/obj/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# Ignore bin and obj directories in GlitchGuard.Infrastructure
+GlitchGuard.Domain/bin/
+GlitchGuard.Domain/obj/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+#Ignore user settings
+GlitchGuard.sln.DotSettings
+GlitchGuard.sln.DotSettings.user
