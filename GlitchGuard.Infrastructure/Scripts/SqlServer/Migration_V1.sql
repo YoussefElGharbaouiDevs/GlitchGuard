@@ -136,7 +136,7 @@ CREATE TABLE [Bugs] (
     CONSTRAINT [PK_Bugs] PRIMARY KEY ([Id]),
     CONSTRAINT [FK_Bugs_Modules_ModuleId] FOREIGN KEY ([ModuleId]) REFERENCES [Modules] ([Id]) ON DELETE CASCADE,
     CONSTRAINT [FK_Bugs_Users_AssignedToUserId] FOREIGN KEY ([AssignedToUserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE,
-    CONSTRAINT [FK_Bugs_Users_ReportedByUserId] FOREIGN KEY ([ReportedByUserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+    CONSTRAINT [FK_Bugs_Users_ReportedByUserId] FOREIGN KEY ([ReportedByUserId]) REFERENCES [Users] ([Id])
 );
 GO
 
@@ -153,7 +153,7 @@ CREATE TABLE [Attachements] (
     [ModifiedBy] nvarchar(max) NOT NULL,
     CONSTRAINT [PK_Attachements] PRIMARY KEY ([Id]),
     CONSTRAINT [FK_Attachements_Bugs_BugId] FOREIGN KEY ([BugId]) REFERENCES [Bugs] ([Id]) ON DELETE CASCADE,
-    CONSTRAINT [FK_Attachements_Users_AuthorUserId] FOREIGN KEY ([AuthorUserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+    CONSTRAINT [FK_Attachements_Users_AuthorUserId] FOREIGN KEY ([AuthorUserId]) REFERENCES [Users] ([Id]) ON DELETE NO ACTION
 );
 GO
 
@@ -168,7 +168,7 @@ CREATE TABLE [Comments] (
     [ModifiedBy] nvarchar(max) NOT NULL,
     CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
     CONSTRAINT [FK_Comments_Bugs_BugId] FOREIGN KEY ([BugId]) REFERENCES [Bugs] ([Id]) ON DELETE CASCADE,
-    CONSTRAINT [FK_Comments_Users_AuthorUserId] FOREIGN KEY ([AuthorUserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+    CONSTRAINT [FK_Comments_Users_AuthorUserId] FOREIGN KEY ([AuthorUserId]) REFERENCES [Users] ([Id])
 );
 GO
 
@@ -218,7 +218,7 @@ CREATE UNIQUE INDEX [UserNameIndex] ON [Users] ([NormalizedUserName]) WHERE [Nor
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20240318024106_Initial', N'7.0.17');
+VALUES (N'20240318030042_Initial', N'7.0.17');
 GO
 
 COMMIT;
