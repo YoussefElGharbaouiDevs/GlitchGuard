@@ -468,7 +468,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                     b.HasOne("GlitchGuard.Domain.Models.UserEntity", "AuthorUser")
                         .WithMany()
                         .HasForeignKey("AuthorUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GlitchGuard.Domain.Models.BugEntity", "Bug")
@@ -499,7 +499,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                     b.HasOne("GlitchGuard.Domain.Models.UserEntity", "ReportedByUser")
                         .WithMany()
                         .HasForeignKey("ReportedByUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AssignedToUser");
@@ -514,7 +514,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                     b.HasOne("GlitchGuard.Domain.Models.UserEntity", "AuthorUser")
                         .WithMany()
                         .HasForeignKey("AuthorUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("GlitchGuard.Domain.Models.BugEntity", "Bug")

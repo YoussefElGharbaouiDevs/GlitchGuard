@@ -38,5 +38,24 @@ public class GlitchGuardDbContext : IdentityDbContext<UserEntity, UserRoleEntity
         modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
 
         #endregion
+        
+        modelBuilder.Entity<BugEntity>()
+            .HasOne(b => b.ReportedByUser)
+            .WithMany()
+            .HasForeignKey(b => b.ReportedByUserId)
+            .OnDelete(DeleteBehavior.NoAction); 
+        
+        
+        modelBuilder.Entity<AttachementEntity>()
+            .HasOne(a => a.AuthorUser)
+            .WithMany()
+            .HasForeignKey(a => a.AuthorUserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<CommentEntity>()
+            .HasOne(c => c.AuthorUser)
+            .WithMany()
+            .HasForeignKey(c => c.AuthorUserId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
 {
     [DbContext(typeof(GlitchGuardDbContext))]
-    [Migration("20240318024106_Initial")]
+    [Migration("20240318030042_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -471,7 +471,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                     b.HasOne("GlitchGuard.Domain.Models.UserEntity", "AuthorUser")
                         .WithMany()
                         .HasForeignKey("AuthorUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("GlitchGuard.Domain.Models.BugEntity", "Bug")
@@ -502,7 +502,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                     b.HasOne("GlitchGuard.Domain.Models.UserEntity", "ReportedByUser")
                         .WithMany()
                         .HasForeignKey("ReportedByUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AssignedToUser");
@@ -517,7 +517,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                     b.HasOne("GlitchGuard.Domain.Models.UserEntity", "AuthorUser")
                         .WithMany()
                         .HasForeignKey("AuthorUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("GlitchGuard.Domain.Models.BugEntity", "Bug")

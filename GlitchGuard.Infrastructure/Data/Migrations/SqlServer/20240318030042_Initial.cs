@@ -241,8 +241,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                         name: "FK_Bugs_Users_ReportedByUserId",
                         column: x => x.ReportedByUserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -275,7 +274,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                         column: x => x.AuthorUserId,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -305,8 +304,7 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                         name: "FK_Comments_Users_AuthorUserId",
                         column: x => x.AuthorUserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
