@@ -20,8 +20,4 @@
       <ProjectReference Include="..\GlitchGuard.Domain\GlitchGuard.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Scripts\SqlServer\" />
-    </ItemGroup>
-
 </Project>

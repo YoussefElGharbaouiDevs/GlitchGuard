@@ -11,7 +11,7 @@ public class AttachementEntity : BaseEntity
 
     public long FileSize { get; set; }
 
-    [ForeignKey("Bug")] public int BugId { get; set; }
+    [ForeignKey("Bug")] public Guid BugId { get; set; }
 
     public BugEntity Bug { get; set; } = new();
 

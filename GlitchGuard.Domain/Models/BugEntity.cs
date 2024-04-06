@@ -13,7 +13,7 @@ public class BugEntity : BaseEntity
 
     public string Status { get; set; } = null!;
 
-    [ForeignKey("Module")] public int ModuleId { get; set; }
+    [ForeignKey("Module")] public Guid ModuleId { get; set; }
 
     public ModuleEntity Module { get; set; } = new();
 

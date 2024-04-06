@@ -11,7 +11,7 @@ public class ModuleEntity : BaseEntity
 
     public string Version { get; set; } = null!;
 
-    [ForeignKey("Application")] public int ApplicationId { get; set; }
+    [ForeignKey("Application")] public Guid ApplicationId { get; set; }
 
     public ApplicationEntity Application { get; set; } = new();
 

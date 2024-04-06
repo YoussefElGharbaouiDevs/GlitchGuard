@@ -24,11 +24,9 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
 
             modelBuilder.Entity("GlitchGuard.Domain.Models.ApplicationEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -66,18 +64,16 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
 
             modelBuilder.Entity("GlitchGuard.Domain.Models.AttachementEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AuthorUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("BugId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BugId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -115,11 +111,9 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
 
             modelBuilder.Entity("GlitchGuard.Domain.Models.BugEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AssignedToUserId")
                         .IsRequired()
@@ -149,8 +143,8 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ModuleId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ModuleId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ReportedByUserId")
                         .IsRequired()
@@ -181,18 +175,16 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
 
             modelBuilder.Entity("GlitchGuard.Domain.Models.CommentEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AuthorUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("BugId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BugId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -223,14 +215,12 @@ namespace GlitchGuard.Infrastructure.Data.Migrations.SqlServer
 
             modelBuilder.Entity("GlitchGuard.Domain.Models.ModuleEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ApplicationId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("ApplicationId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");

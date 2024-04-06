@@ -11,7 +11,7 @@ public class CommentEntity : BaseEntity
 
     public UserEntity AuthorUser { get; set; } = new();
 
-    [ForeignKey("Bug")] public int BugId { get; set; }
+    [ForeignKey("Bug")] public Guid BugId { get; set; }
 
     public BugEntity Bug { get; set; } = new();
 }
